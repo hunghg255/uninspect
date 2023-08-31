@@ -3,6 +3,7 @@ declare global {
 
   interface Window {
     chrome?: any
+    ConsoleBan?: any
   }
 }
 

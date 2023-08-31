@@ -6,3 +6,9 @@ export const init = (option: IConsoleBanOptions) => {
   const instance = new ConsoleBan(option)
   instance.ban()
 }
+
+if (typeof window !== 'undefined') {
+  window.ConsoleBan = {
+    init
+  }
+}

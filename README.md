@@ -9,13 +9,11 @@ In html:
 ```html
 <head>
   <!-- ... -->
-  <script src="https://cdn.jsdelivr.net/npm/uninspect@0.0.1/dist/uninspect.mjs"></script>
-  <script>
-    // default options
-    ConsoleBan.init()
+  <script type="module" src="https://cdn.jsdelivr.net/npm/uninspect@0.0.2/dist/index.mjs"></script>
+  <script type="module">
     // custom options
     ConsoleBan.init({
-      redirect: '/404'
+      redirect: '/play/404.html'
     })
   </script>
 </head>
