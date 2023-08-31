@@ -9,7 +9,7 @@ In html:
 ```html
 <head>
   <!-- ... -->
-  <script type="module" src="https://cdn.jsdelivr.net/npm/uninspect@0.0.2/dist/index.mjs"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/uninspect@0.0.3/dist/index.mjs"></script>
   <script type="module">
     // custom options
     ConsoleBan.init({
