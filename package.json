@@ -1,0 +1,58 @@
+{
+  "name": "uninspect",
+  "version": "0.0.1",
+  "license": "MIT",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "test:cli": "node ./dist/cli.mjs -w -p 1234 -c awesome",
+    "lint": "tsc --noEmit",
+    "start": "esno src/index.ts",
+    "test": "vitest",
+    "verify-commit": "verify-commit-msg",
+    "postinstall": "git-scm-hooks",
+    "release": "bumpp -r && npm publish"
+  },
+  "author": "hunghg255",
+  "devDependencies": {
+    "@types/node": "^18.17.12",
+    "bumpp": "^9.2.0",
+    "esno": "^0.16.3",
+    "git-scm-hooks": "^0.0.7",
+    "terser": "^5.19.3",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2",
+    "verify-commit-msg": "^0.0.9"
+  },
+  "dependencies": {
+    "unbuild": "^1.2.1"
+  },
+  "keywords": [],
+  "git-hooks": {
+    "pre-commit": "npm run lint",
+    "commit-msg": "npm run verify-commit"
+  }
+}
