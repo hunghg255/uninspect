@@ -1,8 +1,21 @@
-# uninspect
+<p align="center">
+<a href="https://www.npmjs.com/package/uninspect" target="_blank" rel="noopener noreferrer">
+<img src="https://api.iconify.design/mingcute:inspect-line.svg?color=%23fdb4e2" alt="logo" width='100'/></a>
+</p>
 
-Detect F12 open browser console. protect web site static resources, support redirect, rewrite, custom callback strategies.
+<p align="center">
+  A library detect inspect element and disable it
+</p>
 
-### Usage
+<p align="center">
+  <a href="https://www.npmjs.com/package/uninspect" target="_blank" rel="noopener noreferrer"><img src="https://badge.fury.io/js/csvs-parsers.svg" alt="NPM Version" /></a>
+  <a href="https://www.npmjs.com/package/uninspect" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/npm/dt/csvs-parsers.svg?logo=npm" alt="NPM Downloads" /></a>
+  <a href="https://bundlephobia.com/result?p=uninspect" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/bundlephobia/minzip/uninspect" alt="Minizip" /></a>
+  <a href="https://github.com/hunghg255/uninspect/graphs/contributors" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/all_contributors-1-orange.svg" alt="Contributors" /></a>
+  <a href="https://github.com/hunghg255/uninspect/blob/main/LICENSE" target="_blank" rel="noopener noreferrer"><img src="https://badgen.net/github/license/hunghg255/uninspect" alt="License" /></a>
+</p>
+
+## Usage
 
 In html:
 
@@ -31,9 +44,9 @@ import { init } from 'uninspect'
 init(options)
 ```
 
-### Strategy
+## Strategy
 
-#### Redirect
+### Redirect
 
 ```js
 ConsoleBan.init({
@@ -48,7 +61,7 @@ Use redirect to guide users to a site introduction page or a purely static 404 p
 
 P.S. In SPA route push scene, detect will not take effect again.
 
-#### Rewrite
+### Rewrite
 
 ```js
 var div = document.createElement('div')
@@ -64,7 +77,7 @@ ConsoleBan.init({
 
 Rewriting strategies can completely block web site content, but are less friendly and are not recommended.
 
-#### Custom callback
+### Custom callback
 
 ```js
 ConsoleBan.init({
@@ -76,7 +89,7 @@ ConsoleBan.init({
 
 The callback function supports custom policies after the console is opened.
 
-### Options
+## Options
 
 |    name     | required |       type        | default | description                                           |
 | :---------: | :------: | :---------------: | :-----: | :---------------------------------------------------- |
@@ -90,7 +103,7 @@ The callback function supports custom policies after the console is opened.
 
 P.S. `redirect`, `write`, `callback` only one will work, priority use `callback`.
 
-### Support
+## Support
 
 | browser core | support |
 | :----------: | :-----: |
